@@ -1,2 +1,2 @@
-# C--Solved-Questions
-Class and  Object question &amp; answer
+# C++ Solved-Questions
+Class and  Object question & answer
