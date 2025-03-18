@@ -1,0 +1,696 @@
+1. Design a class GameConsole with private members: consoleName, manufacturer, and price. Implement methods to set and get console details.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+class GameConsole
+{
+    string consoleName;
+    string manufacturer;
+    double price;
+    
+    public:
+    GameConsole()
+    {
+        consoleName = "unknown";
+        manufacturer = "unknown";
+        price = 0.0;
+    }
+    
+    GameConsole(string name, string manu, double p)
+    {
+        consoleName = name;
+        manufacturer = manu;
+        price = p;
+    }
+    
+    void setDetail()
+    {
+        cout<<"Enter consoleName:";
+        cin.ignore();
+        getline(cin,consoleName);
+        
+        cout<<"Enter manufacturer:";
+        getline(cin,manufacturer);
+        
+        cout<<"Enter price:";
+        cin>>price;
+    }
+    
+    void getDetail()
+    {
+        cout<<"-------------------------\n"<<endl;
+        cout<<"ConsoleName:"<<consoleName<<endl;
+        cout<<"Manufacturer:"<<manufacturer<<endl;
+        cout<<"Price:"<<price<<endl;
+        cout<<"-------------------------\n"<<endl;
+    }
+    
+    
+};
+
+int main()
+{
+    GameConsole* ptr = new GameConsole;
+    
+    ptr-> getDetail();
+    ptr-> setDetail();
+    ptr-> getDetail();
+    
+    delete ptr;
+
+    return 0;
+}
+
+=======================================================================================================================================================================
+
+2. Create a structure Theater with private members: theaterName, location, and numberOfSeats. Use constructors to initialize theater objects.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+struct Theater
+{
+    string theaterName;
+    string location;
+    int numberOfSeats;
+    
+    public:
+    Theater() // default constructor
+    {
+        theaterName = "unknown";
+        location = "unknown";
+        numberOfSeats = 0;
+    }
+
+
+    Theater(string name, string loc, int seats) // Parameterized Constructor
+    {
+        theaterName = name;
+        location = loc;
+        numberOfSeats = seats;
+        
+    }
+    
+    void setDetail()
+    {
+        cout<<"Enter theaterName:";
+        cin.ignore();
+        getline(cin,theaterName);
+        
+        cout<<"Enter location:";
+        getline(cin,location);
+        
+        cout<<"Enter numberOfSeats:";
+        cin>>numberOfSeats;
+    }
+    
+    void getDetail()
+    {
+        cout<<"-------------------------\n";
+        cout<<"theaterName:"<<theaterName<<endl;
+        cout<<"location:"<<location<<endl;
+        cout<<"numberOfSeats:"<<numberOfSeats<<endl;
+        cout<<"-------------------------\n";
+    }
+    
+    
+};
+
+int main()
+{
+    Theater* ptr = new Theater;
+    
+    ptr-> getDetail();
+    ptr-> setDetail();
+    ptr-> getDetail();
+    
+    delete ptr;
+
+    return 0;
+}
+
+=======================================================================================================================================================================
+
+3. Define a class Guitar with private members: brand, model, and price. Provide methods to manage guitar details.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+class Guitar
+{
+    string brand;
+    string model;
+    double price;
+    
+    public:
+    Guitar() // default constructor
+    {
+        brand = "unknown";
+        model = "unknown";
+        price = 0.0;
+    }
+    
+    Guitar(string name, string md, double p) // Parameterized Constructor
+    {
+        brand = name;
+        model = md;
+        price = p;
+        
+    }
+    
+    void setDetail()
+    {
+        cout<<"Enter brand:";
+        cin.ignore();
+        getline(cin,brand);
+        
+        cout<<"Enter model:";
+        getline(cin,model);
+        
+        cout<<"Enter price:";
+        cin>>price;
+    }
+    
+    void getDetail()
+    {
+        cout<<"-------------------------\n";
+        cout<<"brand:"<<brand<<endl;
+        cout<<"model:"<<model<<endl;
+        cout<<"price:"<<price<<endl;
+        cout<<"-------------------------\n";
+    }
+    
+    
+};
+
+int main()
+{
+    Guitar* ptr = new Guitar;
+    
+    ptr-> getDetail();
+    ptr-> setDetail();
+    ptr-> getDetail();
+    
+    delete ptr;
+
+    return 0;
+}
+
+=======================================================================================================================================================================
+
+4. Implement a class Journalist with private members: name, publication, and yearsOfExperience. Use constructors to initialize journalist objects.
+
+Sol. 
+
+#include <iostream>
+using namespace std;
+
+class Journalist 
+{
+    string name;
+    string publication;
+    int yearsOfExperience;
+    
+
+    public:
+    Journalist()  // Default Constructor
+    {
+        name = "Unknown";
+        publication = "Unknown";
+        yearsOfExperience = 0;
+    }
+
+
+    Journalist(string n, string p, int y)     // Parameterized Constructor
+    {
+        name = n;
+        publication = p;
+        yearsOfExperience = y;
+    }
+
+    
+    void setDetails()
+    {
+        cout << "Enter Journalist Name: ";
+        cin.ignore();
+        getline(cin, name);
+
+        cout << "Enter Publication: ";
+        getline(cin, publication);
+
+        cout << "Enter Years of Experience: ";
+        cin >> yearsOfExperience;
+    }
+
+   
+    void getDetails() {
+        cout << "-------------------------\n";
+        cout << "Journalist Name: " << name << endl;
+        cout << "Publication: " << publication << endl;
+        cout << "Years of Experience: " << yearsOfExperience << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main() 
+{
+    Journalist* ptr = new Journalist;
+
+    ptr->getDetails(); 
+    ptr->setDetails(); 
+    ptr->getDetails(); 
+
+    delete ptr; 
+
+    return 0;
+}
+
+=======================================================================================================================================================================
+
+5. Create a class FashionDesigner with private members: designerName, style, and yearsOfExperience. Provide methods to manage designer details.
+
+Sol. 
+
+#include <iostream>
+using namespace std;
+
+class FashionDesigner
+{
+    string designerName;
+    string style;
+    int yearsOfExperience;
+    
+
+    public:
+    FashionDesigner()  // Default Constructor
+    {
+        designerName = "Unknown";
+        style = "Unknown";
+        yearsOfExperience = 0;
+    }
+
+    
+    FashionDesigner(string name, string s, int exp)   // Parameterized Constructor
+    {
+        designerName = name;
+        style = s;
+        yearsOfExperience = exp;
+    }
+
+   
+    void setDetails()
+    {
+        cout << "Enter Designer Name: ";
+        cin.ignore();
+        getline(cin, designerName);
+
+        cout << "Enter Style: ";
+        getline(cin, style);
+
+        cout << "Enter Years of Experience: ";
+        cin >> yearsOfExperience;
+    }
+
+    
+    void getDetails() 
+    {
+        cout << "-------------------------\n";
+        cout << "Designer Name: " << designerName << endl;
+        cout << "Style: " << style << endl;
+        cout << "Years of Experience: " << yearsOfExperience << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main()
+{
+    FashionDesigner* ptr = new FashionDesigner;
+
+    ptr->getDetails(); 
+    ptr->setDetails();
+    ptr->getDetails(); 
+
+    delete ptr; 
+
+    return 0;
+}
+
+
+=======================================================================================================================================================================
+
+6. Design a class Cinema with private members: cinemaName, location, and numberOfScreens. Implement methods to set and get cinema details.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+class Cinema
+{
+    string cinemaName;
+    string location;
+    int numberOfScreens;
+
+
+    public:
+    Cinema()   // Default Constructor 
+    {
+        cinemaName = "Unknown";
+        location = "Unknown";
+        numberOfScreens = 0;
+    }
+
+    
+    Cinema(string name, string loc, int screens)  // Parameterized Constructor
+    {
+        cinemaName = name;
+        location = loc;
+        numberOfScreens = screens;
+    }
+
+    
+    void setDetails() 
+    {
+        cout << "Enter Cinema Name: ";
+        cin.ignore(); 
+        getline(cin, cinemaName);
+
+        cout << "Enter Location: ";
+        getline(cin, location);
+
+        cout << "Enter Number of Screens: ";
+        cin >> numberOfScreens;
+    }
+
+    
+    void getDetails() 
+    {
+        cout << "-------------------------\n";
+        cout << "Cinema Name: " << cinemaName << endl;
+        cout << "Location: " << location << endl;
+        cout << "Number of Screens: " << numberOfScreens << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main()
+{
+    Cinema* ptr = new Cinema;
+
+    ptr->getDetails(); 
+    ptr->setDetails(); 
+    ptr->getDetails(); 
+    
+    delete ptr; 
+
+    return 0;
+}
+
+
+=======================================================================================================================================================================
+
+7. Create a class Electrician with private members: name, experienceYears, and specialization. Provide methods to manage electrician details.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+class Electrician
+{
+    string name;
+    int experienceYears;
+    string specialization;
+
+
+    public:
+    Electrician()  // Default Constructor
+    {
+        name = "Unknown";
+        experienceYears = 0;
+        specialization = "General";
+    }
+
+   
+    Electrician(string n, int exp, string spec)     // Parameterized Constructor
+    {
+        name = n;
+        experienceYears = exp;
+        specialization = spec;
+    }
+
+    
+    void setDetails() 
+    {
+        cout << "Enter Electrician Name: ";
+        cin.ignore(); 
+        getline(cin, name);
+
+        cout << "Enter Years of Experience: ";
+        cin >> experienceYears;
+        cin.ignore(); 
+
+        cout << "Enter Specialization: ";
+        getline(cin, specialization);
+    }
+
+    
+    void getDetails() 
+    {
+        cout << "-------------------------\n";
+        cout << "Electrician Name: " << name << endl;
+        cout << "Years of Experience: " << experienceYears << endl;
+        cout << "Specialization: " << specialization << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main() 
+{
+    Electrician* ptr = new Electrician;
+
+    ptr->getDetails(); 
+    ptr->setDetails(); 
+    ptr->getDetails(); 
+
+    delete ptr; 
+
+    return 0;
+}
+
+
+=======================================================================================================================================================================
+
+8. Define a structutre Robot with private members: robotName, model, and purpose. Provide methods to manage robot details.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+struct Robot
+{
+    string robotName;
+    string model;
+    string purpose;
+
+
+    public:
+    Robot()    // Default Constructor
+    {
+        robotName = "Unknown";
+        model = "Unknown";
+        purpose = "Undefined";
+    }
+
+    
+    Robot(string name, string mod, string purp)  // Parameterized Constructor
+    {
+        robotName = name;
+        model = mod;
+        purpose = purp;
+    }
+
+    
+    void setDetails() 
+    {
+        cout << "Enter Robot Name: ";
+        cin.ignore(); 
+        getline(cin, robotName);
+
+        cout << "Enter Model: ";
+        getline(cin, model);
+
+        cout << "Enter Purpose: ";
+        getline(cin, purpose);
+    }
+
+    
+    void getDetails() {
+        cout << "-------------------------\n";
+        cout << "Robot Name: " << robotName << endl;
+        cout << "Model: " << model << endl;
+        cout << "Purpose: " << purpose << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main() 
+{
+    Robot* ptr = new Robot;
+
+    ptr->getDetails(); 
+    ptr->setDetails(); 
+    ptr->getDetails(); 
+
+    delete ptr; 
+
+    return 0;
+}
+
+=======================================================================================================================================================================
+
+9. Implement a class Yacht with private members: yachtName, length, and owner. Use constructors to initialize yacht objects.
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+class Yacht 
+{
+    string yachtName;
+    double length;
+    string owner;
+    
+
+    public:
+    Yacht()   // Default Constructor
+    {
+        yachtName = "Unknown";
+        length = 0.0;
+        owner = "Not Assigned";
+    }
+
+    
+    Yacht(string name, double len, string own)   // Parameterized Constructor
+    {
+        yachtName = name;
+        length = len;
+        owner = own;
+    }
+
+    
+    void setDetails() 
+    {
+        cout << "Enter Yacht Name: ";
+        getline(cin, yachtName);
+
+        cout << "Enter Length (in meters): ";
+        cin >> length;
+        cin.ignore(); 
+
+        cout << "Enter Owner Name: ";
+        getline(cin, owner);
+    }
+
+    
+    void getDetails() {
+        cout << "-------------------------\n";
+        cout << "Yacht Name: " << yachtName << endl;
+        cout << "Length: " << length << " meters" << endl;
+        cout << "Owner: " << owner << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main() 
+{
+    Yacht* ptr = new Yacht;
+
+    ptr->getDetails(); 
+    ptr->setDetails(); 
+    ptr->getDetails(); 
+
+    delete ptr; 
+
+    return 0;
+}
+
+=======================================================================================================================================================================
+
+10. Create a structuture BasketballTeam with private members: teamName, coachName, and numberOfPlayers. Provide methods to manage team details
+
+Sol.
+
+#include <iostream>
+using namespace std;
+
+struct BasketballTeam 
+{
+    string teamName;
+    string coachName;
+    int numberOfPlayers;
+
+    public:
+    BasketballTeam()   // Parameterized Constructor
+    {
+        teamName = "Unknown";
+        coachName = "Unknown";
+        numberOfPlayers = 0;
+    }
+
+    
+    BasketballTeam(string tName, string cName, int players)   // Parameterized Constructor
+    {
+        teamName = tName;
+        coachName = cName;
+        numberOfPlayers = players;
+    }
+
+    
+    void setDetails() 
+    {
+        cout << "Enter Team Name: ";
+        getline(cin, teamName);
+
+        cout << "Enter Coach Name: ";
+        getline(cin, coachName);
+
+        cout << "Enter Number of Players: ";
+        cin >> numberOfPlayers;
+    }
+
+    
+    void getDetails() 
+    {
+        cout << "-------------------------\n";
+        cout << "Team Name: " << teamName << endl;
+        cout << "Coach Name: " << coachName << endl;
+        cout << "Number of Players: " << numberOfPlayers << endl;
+        cout << "-------------------------\n";
+    }
+};
+
+int main() 
+{
+    BasketballTeam* ptr = new BasketballTeam;
+
+    ptr->getDetails();
+    ptr->setDetails(); 
+    ptr->getDetails(); /
+
+    delete ptr; 
+
+    return 0;
+}
+
+
+=======================================================================================================================================================================
